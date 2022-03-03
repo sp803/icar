@@ -1,0 +1,38 @@
+POST http://localhost:3000/auth/register
+content-type: application/json
+
+{
+  "phone": "1234561",
+  "password": "Hello world"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "phone": "1234561",
+  "password": "Hello world"
+}
+
+###
+
+POST http://localhost:3000/auth/forgot_password
+Content-Type: application/json
+
+{
+  "phone": "123456",
+  "newPassword": "1234"
+}
+
+###
+
+POST http://localhost:3000/auth/check
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzQ1NjEiLCJpYXQiOjE2NDYyODY3Nzh9.XaDdx7AWPRfjExaOHR6RZOXmpFo9q75qA0AWicJii6I
+
+{
+  "phone": "123456",
+  "newPassword": "1234"
+}
